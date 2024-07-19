@@ -1,0 +1,7 @@
+- name: Features
+  link: /
+  icon: fa-solid fa-chess-board
+
+- name: Download
+  link: /download
+  icon: fa-solid fa-download

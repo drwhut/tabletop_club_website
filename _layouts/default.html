@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tabletop Club - {{ page.title }}</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/png" href="/assets/images/tabletop_club_icon.png">
+
+        <meta name="viewport" contents="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+        <link rel="stylesheet" href="/assets/css/theme.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css">
+
+        <script src="/assets/js/nav_menu.js"></script>
+    </head>
+    <body>
+        {% include navigation.html %}
+        {{ content }}
+    </body>
+</html>

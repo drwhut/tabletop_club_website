@@ -1,0 +1,31 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="/assets/images/tabletop_club_title.svg">
+        </a>
+        <a class="navbar-burger" role="button" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+        <div class="navbar-start">
+            {% for item in site.data.navigation %}
+                <a class="navbar-item {% if page.url == item.link %}is-active{% endif %}" href="{{ item.link }}">
+                    <span class="icon">
+                        <i class="{{ item.icon }}"></i>
+                    </span>
+                    <span class="navbar-item-name">
+                        {{ item.name }}
+                    </span>
+                </a>
+            {% endfor %}
+        </div>
+        <div class="navbar-end">
+
+        </div>
+    </div>
+</nav>

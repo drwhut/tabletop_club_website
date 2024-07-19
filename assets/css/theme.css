@@ -1,0 +1,20 @@
+:root {
+    --bulma-link-h: 120deg;
+    --bulma-link-s: 20%;
+}
+
+.navbar {
+    --bulma-navbar-background-color: #083d2b;
+}
+
+.hero {
+    background-image: url("/assets/images/hero_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title, .subtitle {
+    --bulma-subtitle-color: white;
+    text-shadow: 2px 2px 4px black;
+}
