@@ -14,7 +14,8 @@
     background-size: cover;
 }
 
-.title, .subtitle {
+p.title, p.subtitle {
+    --bulma-title-color: white;
     --bulma-subtitle-color: white;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 2px black;
 }

@@ -2,3 +2,38 @@
 layout: home
 title: Home
 ---
+<section class="section">
+    <h1 id="features" class="title has-text-centered">Features</h1>
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                {% for item in site.data.features limit: 3 %}
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">{{ item.header }}</p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                {{ item.body }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="column">
+                {% for item in site.data.features limit: 3 offset: continue %}
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">{{ item.header }}</p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                {{ item.body }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

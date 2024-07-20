@@ -1,0 +1,17 @@
+- header: Custom Games
+  body: Import your own pieces, boards, and tables with the easy-to-use <a href="https://tabletop-club.readthedocs.io/en/stable/custom_assets/asset_packs/index.html" target="_blank">asset pack</a> system.
+
+- header: Physics Sandbox
+  body: With the ability to move, scale, and rotate pieces freely, you can play what you want, however you want.
+
+- header: Open Source
+  body: The game is free to download and play forever, and is <a href="https://tabletop-club.readthedocs.io/en/stable/general/contributing/ways_to_contribute.html" target="_blank">open to contributions</a> from anyone.
+
+- header: Accountless Multiplayer
+  body: Playing with your friends is super simple, just host a game and share the room code.
+
+- header: Helpful Tools
+  body: Measure distances with the ruler, draw on the table using the brush, or keep track of scores in the notebook.
+
+- header: Friendly Community
+  body: Join our <a href="https://discord.gg/GqYkGV4WwX" target="_blank">Discord</a> or <a href="https://matrix.to/#/#tabletop-club:matrix.org" target="_blank">Matrix</a> servers to ask for help, discuss board games, or share asset packs.
