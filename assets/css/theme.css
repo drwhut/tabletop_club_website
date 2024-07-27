@@ -19,3 +19,7 @@ p.title, p.subtitle {
     --bulma-subtitle-color: white;
     text-shadow: 2px 2px 2px black;
 }
+
+a:not(.button, .navbar-item) {
+    text-decoration: underline;
+}

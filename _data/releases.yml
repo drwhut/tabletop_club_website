@@ -1,0 +1,71 @@
+- version: v0.1.2
+  nickname:
+  post: _posts/TODO
+  date: 2023-09-05
+  type: stable
+  has_windows_32: true
+  has_linux_32: true
+
+- version: v0.1.1
+  nickname:
+  post: _posts/TODO
+  date: 2023-06-06
+  type: stable
+  has_windows_32: true
+  has_linux_32: true
+
+- version: v0.1.0
+  nickname: Humble Beginnings
+  post: _posts/TODO
+  date: 2023-04-29
+  type: stable
+  has_windows_32: true
+  has_linux_32: true
+
+- version: v0.1.0-rc2
+  nickname:
+  post: _posts/TODO
+  date: 2023-04-11
+  type: prerelease
+  has_windows_32: true
+  has_linux_32: true
+
+- version: v0.1.0-rc1
+  nickname:
+  post: _posts/TODO
+  date: 2023-03-30
+  type: prerelease
+  has_windows_32: true
+  has_linux_32: true
+
+- version: v0.1.0-beta4
+  nickname:
+  post: _posts/TODO
+  date: 2023-03-21
+  type: prerelease
+  has_windows_32: true
+  has_linux_32: true
+
+- version: v0.1.0-beta3
+  nickname:
+  post: _posts/TODO
+  date: 2023-03-06
+  type: prerelease
+  has_windows_32: true
+  has_linux_32: true
+
+- version: v0.1.0-beta2
+  nickname:
+  post: _posts/TODO
+  date: 2023-02-20
+  type: prerelease
+  has_windows_32: true
+  has_linux_32: true
+
+- version: v0.1.0-beta1
+  nickname:
+  post: _posts/TODO
+  date: 2022-11-25
+  type: prerelease
+  has_windows_32: false
+  has_linux_32: false
