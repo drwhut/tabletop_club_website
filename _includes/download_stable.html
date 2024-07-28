@@ -21,7 +21,7 @@
             <p>Alternatively, you can download a portable version of the game: simply extract the files anywhere, and run the executable.</p>
             <article class="message is-info">
                 <div class="message-body">
-                    If you are using <strong>Windows 11</strong>, you will also need to right-click the executable, open <strong>Properties</strong>, and tick the <strong>Unblock</strong> checkbox at the bottom of the window.
+                    If you are using <strong>Windows 11</strong>, you will also need to right-click the executable once it has been extracted, open <strong>Properties</strong>, and tick the <strong>Unblock</strong> checkbox at the bottom of the window.
                 </div>
             </article>
             <article class="message is-warning">
@@ -43,6 +43,7 @@
                     <span>Tabletop Club {{ latest_stable.version }} for Windows (x86, 32-bit)</span>
                 </a>
             </div>
+            <p><i><strong>Windows 7</strong> or later is recommended.</i></p>
         </div>
         <div class="cell content">
             <h2>Linux</h2>
@@ -76,7 +77,7 @@
             <article class="message is-danger">
                 <div class="message-body">
                     There is a known bug that prevents the game from running on newer devices with ARM processors (M1, M2, etc.) - you can get around this by forcing the game to run under <strong>Rosetta</strong> by selecting the game in <strong>Finder</strong>, pressing <strong>Command + I</strong>, then checking <strong>Open using Rosetta</strong> in the <strong>Inspector</strong> window.
-                    This bug will be fixed in future updates.
+                    For more information, read through <a href="https://github.com/drwhut/tabletop-club/issues/282" target="_blank">the bug report</a>.
                 </div>
             </article>
             <div class="buttons are-medium">
@@ -87,16 +88,41 @@
                     <span>Tabletop Club {{ latest_stable.version }} for macOS (Universal)</span>
                 </a>
             </div>
-        </div>
-        <!--
-        <div class="cell content">
-            <h2>Windows</h2>
-            <p>The recommended way to install the game is through the <a href="#itch">itch app</a></p>
+            <p><i><strong>macOS 10.12</strong> or later is recommended.</i></p>
         </div>
         <div class="cell content">
             <h2 id="itch">itch.io</h2>
+            <p>As well as a standalone executable, you can also download and play the game from <a href="https://drwhut.itch.io/tabletop-club" target="_blank">itch.io</a>, which is a video game distribution service primarily for independent developers.</p>
+            <p>By downloading the game from the <a href="https://itch.io/app" target="_blank">itch app</a>, you will receive updates as soon as they are released, and you will have access to a huge catalog of games from amazingly talented developers.</p>
             <p><a href="https://drwhut.itch.io/tabletop-club" target="_blank"><img src="/assets/images/itch_io_badge.svg" style="max-height: 5em;"></a></p>
         </div>
-        -->
+        <div class="cell content">
+            <h2>Pre-release Builds</h2>
+            <p>Want to try out the latest features, and help make future versions of the game better? Feel free to download a pre-release build of the game, which is a snapshot of the next version of Tabletop Club before it is officially released.</p>
+            <a class="button is-primary is-medium" href="/downloads/prerelease">
+                <span class="icon">
+                    <i class="fa-solid fa-download"></i>
+                </span>
+                <span>Download Pre-release Builds</span>
+            </a>
+        </div>
+        <div class="cell content">
+            <h2>Source Code</h2>
+            <p>You can also download the source code directly and compile the game from scratch. This can be useful if you wish to contribute to the source code, want to help debug an issue, or just want to experiment with the code.</p>
+            <div class="buttons are-medium">
+                <a class="button is-info" href="https://tabletop-club.readthedocs.io/en/stable/general/download/compiling_from_source.html" target="_blank">
+                    <span class="icon">
+                        <i class="fa-solid fa-book"></i>
+                    </span>
+                    <span>Instructions</span>
+                </a>
+                <a class="button is-primary" href="https://github.com/drwhut/tabletop-club" target="_blank">
+                    <span class="icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    <span>Tabletop Club on GitHub</span>
+                </a>
+            </div>
+        </div>
     </div>
 </div>

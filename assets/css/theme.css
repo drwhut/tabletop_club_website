@@ -7,6 +7,10 @@
     --bulma-navbar-background-color: #083d2b;
 }
 
+.navbar-item {
+    --bulma-navbar-item-color-l: 90%;
+}
+
 .hero {
     background-image: url("/assets/images/hero_background.jpg");
     background-position: center;
