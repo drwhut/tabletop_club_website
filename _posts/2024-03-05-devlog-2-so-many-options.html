@@ -1,0 +1,69 @@
+---
+layout: post
+title: "Devlog #2: So many options..."
+---
+<p>Ahoy! How's it going? It's been a bit since the last devlog, so I wanted to update you guys on the progress I've made with the v0.2.0 update by showing you some cool screenshots and GIFs that make you go "oh wow, this guy is showing me some cool screenshots and GIFs"!</p>
+<p>But first, there's something that I need to do. Something that has been lurking in the shadows for months, that I have neglected up until now, and that my career as an independent, open-source game developer depends on. That's right - <strong>shameless plugging</strong>!</p>
+<h2>Donating via Ko-fi</h2>
+<p>Are you a fan of free, open-source board game simulators? Do you want to see more stuff more quickly in said board game simulators? Do you like making random men on the internet so happy that they start squealing and make random unintelligible noises??</p>
+<p>Well, come on down to the one-stop shop for all your money-induced, stranger-pleasing needs! For as little as five pounds (no, not the weight, you freedom lovers), you can be safe in the knowledge that your favourite board game simulator will get <strong>even better</strong>, with awesome new features like:</p>
+<ul><li>An online database of asset packs!</li><li>An in-game asset pack editor!</li><li>A Lua scripting API!</li><li>An upgrade to Godot 4!</li></ul>
+<p>So, what are you waiting for? Visit the brand new <a href="https://ko-fi.com/drwhut" target="_blank">Ko-fi page</a> now and donate to the melon who just word-vomited this segment and somehow it kind of worked out??</p>
+<h2>New Options Menu</h2>
+<p>If you haven't read&nbsp;<a href="https://drwhut.itch.io/tabletop-club/devlog/632489/devlog-1-new-foundations" target="_blank">the last devlog</a>, the TL;DR is that for the v0.2.0 update I'm in the process of re-writing the majority of the game due to the fact that, although it worked for the most part, I wasn't happy with the code and some aspects of the UI. So far in the re-write, I think the area of the game that has improved the most from a visual standpoint is the options menu:</p>
+<h3>Audio</h3>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc0ODkwLnBuZw==/original/0djxMB.png" alt="A comparison between the v0.1.2 audio settings and the v0.2.0 ones."></p>
+<ul><li>The tabs at the top, as well as the buttons at the bottom, have been given icons.</li><li>All of the sliders in the options menu now show values.</li><li>The "Effects Volume" setting has been renamed to "Object Volume" to better express its function.</li><li>The "OK" button has been removed, and the "Apply" button will only become clickable once changes have been made.</li></ul>
+<h3>Controls</h3>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc0OTIwLnBuZw==/original/pXZLgf.png" alt="A comparison between the v0.1.2 control settings and the v0.2.0 ones."></p>
+<ul><li>What was previously the "Key Bindings" tab has now become a sub-menu within the "Controls" tab.</li><li>Similar settings have been grouped together.</li><li>When hovering over settings with the mouse, or when they are focused with either the keyboard or a controller, hints will be shown at the bottom of the menu.</li></ul>
+<h3>General</h3>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc0OTcxLnBuZw==/original/VqeVtP.png" alt="A comparison between the v0.1.2 general settings and the v0.2.0 ones."></p>
+<ul><li>A note has been added under the "Language" setting warning that translations may not be complete, and explains how they can be contributed.</li><li>Custom UI elements have been created for controller support. The "Autosave File Count" setting has one of these new UI elements.</li><li>The "Open Assets Folder" and "Reimport Assets" buttons have been removed from the options menu, as they will be added in the future "Collection" menu.</li></ul>
+<h3>Player</h3>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc1MDA5LnBuZw==/original/zLYDWp.png" alt="A comparison between the v0.1.2 player settings and the v0.2.0 ones."></p>
+<ul><li>A preview has been added for what the player's name and colour will look like in-game.</li><li>The colour picker provided by the Godot Engine has been replaced with custom colour sliders for controller support.</li><li>A warning will now appear if the player name is invalid.</li></ul>
+<h3>Video</h3>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc1MDI5LnBuZw==/original/lCxf7H.png" alt="A comparison between the v0.1.2 video settings and the v0.2.0 ones."></p>
+<ul><li>Added the "UI Scale" setting, which adjusts how large the UI appears relative to it's default size.</li><li>Added a "Graphics Quality" preset setting, which adjusts all of the advanced graphics settings for you based on levels of visual quality. For new players, this will be set to "Medium" by default.</li><li>All of the advanced graphics settings are now hidden by default, but a toggle has been added so that they can be adjusted manually.</li><li>A restart is no longer required when changing the "Shadow Detail" setting.</li><li>The Fast Approximate Anti-Aliasing (FXAA) method has been added, which is more performant than MSAA, but can result in slightly blurry edges. This is the default anti-aliasing method for new players.</li><li>Added settings for adjusting the brightness, contrast, and saturation, of the game.</li></ul>
+<h3>Key Bindings</h3>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc1NTYwLnBuZw==/original/czg3aS.png" alt="A comparison between the v0.1.2 key bindings menu and the v0.2.0 one."></p>
+<ul><li>Actions have been grouped together by type.</li><li>All actions can have up to two bindings now, instead of just one.</li><li>Bindings can now be removed by holding down the Escape key while they are being set.</li><li>Added actions for rotating the camera up, down, left, and right. By default these are bound to the arrow keys.</li><li>The mouse wheel's default binding of zooming in and out can now be adjusted.</li></ul>
+<h2>Multiplayer Refactor</h2>
+<p>After completing the new options menu, I set my sights on the multiplayer back-end. Luckily, I actually did somewhat of an OK job with the code the first time around, so this was mostly a case of tidying it up, improving the UI, and dealing with <strong>every possible outcome that could occur</strong>.</p>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc2MDI4LnBuZw==/original/2kn6dJ.png" alt="A comparison between the v0.1.2 multiplayer menu and the v0.2.0 one."></p>
+<p>You may notice that there's a new toggle: it hasn't been fully implemented yet, but the plan is that as well as being able to share room codes with your friends so that they can join your game, you will also be able to host games in "Direct Connection" mode, <strong>which uses IP addresses instead of room codes</strong>. This way, you don't have to rely on the game's lobby server in order to play with each other, and you can host games easily over the local network (LAN). With port forwarding, you'll also be able to host games over the internet as well.</p>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc2MDc0LnBuZw==/original/UQQl0u.png"></p>
+<h6>The new "Host Game" menu.</h6>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc2MDgzLnBuZw==/original/%2FnBwaV.png"></p>
+<h6>The new "Join Game" menu.</h6>
+<p>Both the "Host Game" and "Join Game" menus now explain the process of hosting and joining a multiplayer room, and include a note about the necessary internet connection and possible system permission pop-up.</p>
+<p>Entering the room code is now also supported on controller by pressing the up and down arrows next to the text boxes, which will cycle through the alphabet.</p>
+<p>You can now also hide the room code from this menu as well as in-game, which will be useful for anyone that streams the game live so that you don't need to switch scenes as you are setting up a multiplayer game.</p>
+<p>The process of hosting and joining multiplayer rooms has been greatly improved - previously, the game would enter a loading screen to go to the main game scene, and only after it had fully loaded would it attempt to setup the lobby. This meant that if something went wrong with the setup, the player would be put into a second loading screen back to the main menu to show the error:</p>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc2NDc1LmdpZg==/original/A%2B87li.gif" alt="A demonstration of attempting to join a non-existent room in v0.1.2."></p>
+<p>In hindsight, this was<em></em>&nbsp;probably one of the worst design decisions I made... but I have now redeemed myself!</p>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc2NTM0LmdpZg==/original/zKrIVb.gif" alt="A demonstration of attempting to join a non-existent room in v0.2.0."></p>
+<p>Now, <strong>the entire setup process happens within the multiplayer menu</strong>. If something goes wrong (for example, the client can't connect to the master server, or a connection couldn't be established with the room's host), then an error is shown there and then on the menu, with no loading screens whatsoever. You can then try again straight away without having to navigate back through the menus.</p>
+<p><strong>You can now also cancel the attempt to setup a multiplayer game as it is happening.</strong> This can come in handy if you're noticing that it's taking a bit too long to connect, although if it takes too long the game will eventually give up after about 30 seconds.</p>
+<p>With the updates to the multiplayer back-end, <strong>the game now properly detects and handles silent disconnects</strong>. This is where the connection between two clients gets lost without either client purposefully causing it, for example, when one client's internet connection drops all of a sudden.</p>
+<p>Furthermore, in v0.1.x the game would kick the player back to the main menu when the connection to either the master server or the host was lost. That is no longer the case - if the connection to the master server is lost, then <strong>the room will continue as is</strong>, with the only issue being that no new players will be able to join until a new room is made. On the other hand, if a client's connection to the host of the room is lost, then <strong>the game will switch to singleplayer mode on the fly</strong>, and will give the player the choice to either continue in singleplayer mode, or to go back to the main menu to try and reconnect with the host:</p>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc3MDg4LnBuZw==/original/NEs88B.png" alt="A pop-up warning the player that they have disconnected from the host, giving them a choice between staying in singleplayer or saving and going back to the main menu."></p>
+<h2>Chat Window Update</h2>
+<p>As well as the options and multiplayer menus, the chat window has also been given a fancy new look:</p>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc1NjA3LnBuZw==/original/RUnpjm.png" alt="A comparison between the v0.1.2 chat window and the v0.2.0 one."></p>
+<p>Previously, the chat window was only shown when the player was in a game. Now that the game scene and the main menu scene are one and the same, <strong>the chat window is now also shown in the main menu</strong>, where the player can invoke commands if they wish. This also means that errors and warnings that are thrown when importing custom assets <strong>are now shown in the chat window instead of in a separate import log</strong>.</p>
+<p>You can now also press the Enter key while in-game to immediately start typing a message to the other players, as well as the forward slash (/) key to start typing a command.</p>
+<p>Other updates to the chat window include:</p>
+<ul><li>Using the up and down arrow keys while typing a message will now cycle through the player's message and command history.</li><li>The chat window will now make itself transparent when the mouse is being captured elsewhere, for example, when rotating the camera.</li></ul>
+<h2>Documentation Update</h2>
+<p>The tools used to build the project's documentation have been updated, and as such, the appearance has been updated dramatically:</p>
+<p><img src="https://img.itch.zone/aW1nLzE1Mjc1NjM3LnBuZw==/original/TtBPaF.png" alt="A comparison between the v0.1.2 documentation home page and the v0.2.0 home page."></p>
+<ul><li>The webpage now has dark mode support, which can be toggled at the top of the page.</li><li>Icon links have been added to the left-hand navigation bar, which link to the project's various websites.</li></ul>
+<h2>macOS: M1 & M2 Crash Fix</h2>
+<p>When v0.1.0 first came out, the library used to provide multiplayer WebRTC functionality only had x86_64 support for macOS, meaning that those of you using ARM processors (like the M1 or M2 chips) were not able to run the game without using Rosetta.</p>
+<p>Now that the library has been updated with ARM support, this should fix the crash for M1 and M2 users, but <a href="https://github.com/drwhut/tabletop-club/issues/282#issuecomment-1973707373" target="_blank">this requires testing</a>.</p>
+<h2>What's next?</h2>
+<p>Now that all of the elements of the main menu are pretty much done, I'll finally be moving on to the in-game systems! The first thing I'll be revisiting are the objects, more specifically, improving the code that handles players moving them around the room, and trying to make the selection outline clearer, especially in player's hands. After that, I'll be re-organising the absolutely mammoth CameraController script, and attempt to split it up into multiple different scripts so that it is a lot more maintainable overall.</p>
+<p>That's pretty much it for this update! You can find the full list of changes made for the v0.2.0 update so far <a href="https://github.com/drwhut/tabletop-club/blob/8c42b3d7510f5a740938055f6268b6aa3550c281/CHANGELOG.md" target="_blank">here</a>.</p>
+<p>Until next time!</p>

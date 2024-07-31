@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Release: v0.1.0 Beta 4"
+---
+<p><strong>TL;DR:</strong>  The main focus for the v0.1.0 release now is bug fixes, I'm planning to  re-write most of the code for v0.2.0, which is when most of the "big"  features that have been requested will be added.
+</p>
+<p>Why, hello there! Can I interest you in a dinner at the Tabletop  Club... restaurant(?) For our starter, we have the "convenience soup",  with ingredients such as pre-made editor builds so you don't have to  compile the engine to play from source, the first set of chat commands,  and a new in-game log to show your import errors so you don't have to go  looking for the log files! Our main course is a delicious mixture of <strong>new pre-bundled games</strong>,  and for supper, we have a sugary new splash screen! All this, plus we  have a new Spanish edition of the documentation! Does that sound tasty? <img class="emoji" alt="stuck_out_tongue" src="https://github.githubassets.com/images/icons/emoji/unicode/1f61b.png" width="20" height="20">
+</p>
+<p>Food analogies aside (<em>now I've made myself hungry, oops</em>),  I... may or may not have a request to ask of you all. This may very well  be the last beta version of v0.1.0 before I start building release  candidates! I'm pretty happy with where the game is at currently in  terms of stability and features, so I'm waiting to add new "big"  features until v0.2.0 to make sure the release of v0.1.0 is as smooth as  possible. Plus, this also gives me the opportunity after the full  release to re-write most of the code, which should achieve the  following:
+</p>
+<ul><li>Implement optimisations at the core of the game that aren't possible now without breaking everything.
+</li><li>Make the game structure more modular, allowing for easier extension and allowing scenes to be remade for other platforms.
+</li><li>Prepare for the conversion to Godot 4.1, soon(-ish) after it is released.
+</li></ul>
+<p>So given this <em>may</em> be the last beta, this is my request to you all: <strong>Break the game.</strong>  Take it into your hands, and crush it into little pieces. Put it on the  ground and smoosh it with your feet! Throw it against the wall! Hit it  with a HAMMER! <em>Cut it up with a chainsaw!!</em> <strong>Blow it up with 1,000 tons of dynamite!!!</strong>
+</p>
+<p>A-hem... may have gotten a bit carried away there. What I'm trying to  say is, now is a really good time to try and break the game before the  first full release! If you do end up finding any bugs or crashes, please  do not hesitate to <a href="https://github.com/drwhut/tabletop-club/issues/new?assignees=&labels=&template=bug_report.md&title=">report them on GitHub</a> if it hasn't been reported already, and I'll try my best to fix as many of them as possible. I will still accept <a href="https://github.com/drwhut/tabletop-club/issues/new?assignees=&labels=&template=feature_request.md&title=">feature requests</a>  as per usual, but chances are they'll be implemented from v0.2.0  onwards, unless they're either really small, or a helpful tweak to an  already-existing feature.
+</p>
+<p>With all of that said, enjoy the new beta! Please let me know what you think on <a href="https://drwhut.itch.io/tabletop-club" rel="nofollow">itch.io</a>, <a href="https://fosstodon.org/@drwhut" rel="nofollow">Mastodon</a>, or on <a href="https://twitter.com/drwhutt" rel="nofollow">Twitter</a> <img class="emoji" alt="grin" src="https://github.githubassets.com/images/icons/emoji/unicode/1f601.png" width="20" height="20">
+</p>
+<h2>Changelog</h2>
+<h3>Added</h3>
+<ul><li>Added a splash screen for the Godot Engine at the start of the game.
+</li><li>Added the option to skip the new splash screen in the options menu.
+</li><li>Starting with this release, editor builds of the custom engine will be provided for convenience.
+</li><li>Can now invoke commands in the chat box: <ul><li><code>/?</code>, <code>/help</code>: Show the list of possible commands.
+</li><li><code>/w</code>, <code>/whisper</code>: Send a private message to another player, e.g. <code>/w "drwhut" Only you can see this!</code>
+</li></ul> 
+</li><li>Added a welcome message when entering a room, explaining the use of the new <code>/help</code> command.
+</li><li>Now show an import log in the main menu if there was at least one error when importing assets at the start of the game.
+</li><li>New items have been added to the default asset pack: <ul><li><code>boards</code>: Go Board (Large), Go Board (Small)
+</li><li><code>cards</code>: Seer, Villager, Werewolf
+</li><li><code>containers</code>: Pot
+</li><li><code>games</code>: Dominoes, Go
+</li><li><code>pieces</code>: Stone Black, Stone White
+</li><li><code>tokens</code>: Dominoes (28-set)
+</li></ul> 
+</li><li>Updated translations from the community.
+</li><li>The documentation is now available in Spanish.
+</li></ul>
+<h3>Fixed</h3>
+<ul><li>Fixed various errors when going through the Object menu pages quickly.
+</li><li>Added an upper limit of 100,000 errors that can be logged to files,  preventing the creation of massive log files in the event of a crash  loop.
+</li><li>Fixed containers not unlocking on the server when the table was flipped.
+</li><li>Fixed speaker controls in the context menu creating a callback loop in multiplayer.
+</li></ul>
