@@ -6,34 +6,57 @@ title: Home
     <h1 id="features" class="title has-text-centered">Features</h1>
     <div class="container">
         <div class="columns">
-            <div class="column">
-                {% for item in site.data.features limit: 3 %}
-                    <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">{{ item.header }}</p>
-                        </header>
-                        <div class="card-content">
-                            <div class="content">
-                                {{ item.body }}
+            {% for column in (1..2) %}
+                <div class="column">
+                    {% for item in site.data.features limit: 3 offset: continue %}
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">{{ item.header }}</p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    {{ item.body }}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="column">
-                {% for item in site.data.features limit: 3 offset: continue %}
-                    <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">{{ item.header }}</p>
-                        </header>
-                        <div class="card-content">
-                            <div class="content">
-                                {{ item.body }}
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
         </div>
     </div>
+</section>
+<section class="section">
+    <h1 id="gallery" class="title has-text-centered">Gallery</h1>
+    <div class="container">
+        <div class="columns">
+            {% for column in (1..2) %}
+                <div class="column">
+                    {% for screenshot in site.data.screenshots limit: 2 offset: continue %}
+                        <figure class="image">
+                            <a href="/assets/images/{{ screenshot.file }}">
+                                <img src="/assets/images/{{ screenshot.file }}" alt="{{ screenshot.alt }}">
+                            </a>
+                            <figcaption>{{ screenshot.caption }}</figcaption>
+                        </figure>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="section is-medium has-text-centered">
+    <h1 class="title">Play for free, forever.</h1>
+    <a class="button is-primary is-large" href="/downloads">
+        <span class="icon">
+            <i class="fa-solid fa-download"></i>
+        </span>
+        <span>Download Tabletop Club</span>
+    </a>
+</section>
+<section class="section has-text-centered">
+    <h1 class="title">Donate</h1>
+    <h2 class="subtitle">This game is being made for free in my spare time. Any tips would be greatly appreciated!</h2>
+    <a href="https://ko-fi.com/drwhut" target="_blank">
+        <img src="/assets/images/kofi_button_red.webp" style="max-height: 4em;">
+    </a>
 </section>

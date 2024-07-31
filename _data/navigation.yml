@@ -2,6 +2,10 @@
   link: /#features
   icon: fa-solid fa-chess-board
 
+- name: Gallery
+  link: /#gallery
+  icon: fa-solid fa-images
+
 - name: Download
   link: /downloads/
   icon: fa-solid fa-download
