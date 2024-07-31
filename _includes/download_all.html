@@ -1,0 +1,64 @@
+<div class="table-container">
+    <table class="table is-striped is-hoverable is-fullwidth">
+        <thead>
+            <tr>
+                <th>Version</th>
+                <th>Type</th>
+                <th>Released</th>
+                <th>
+                    <span class="icon">
+                        <i class="fa-brands fa-windows"></i>
+                    </span>
+                    <span>Windows (x86_64)</span>
+                </th>
+                <th>
+                    <span class="icon">
+                        <i class="fa-brands fa-windows"></i>
+                    </span>
+                    <span>Windows (x86)</span>
+                </th>
+                <th>
+                    <span class="icon">
+                        <i class="fa-brands fa-linux"></i>
+                    </span>
+                    <span>Linux (x86_64)</span>
+                </th>
+                <th>
+                    <span class="icon">
+                        <i class="fa-brands fa-linux"></i>
+                    </span>
+                    <span>Linux (x86)</span>
+                </th>
+                <th>
+                    <span class="icon">
+                        <i class="fa-brands fa-apple"></i>
+                    </span>
+                    <span>macOS (Universal)</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {%- assign platform_list = "Windows_64 Windows_32 Linux_64 Linux_32 OSX_Universal" | split: " " -%}
+            {% for release in site.data.releases %}
+                <tr>
+                    <td>{{ release.version }}{% if release.nickname != nil %} - "{{ release.nickname }}"{% endif %}</td>
+                    <td>{{ release.type }}</td>
+                    <td>{{ release.date | date_to_string }}</td>
+                    {% for platform in platform_list %}
+                        {% if platform == "Windows_32" and release.has_windows_32 == false %}
+                            <td>N/A</td>
+                        {% elsif platform == "Linux_32" and release.has_linux_32 == false %}
+                            <td>N/A</td>
+                        {% else %}
+                            {%- assign download_link = "/downloads/releases/TYPE/VERSION/TabletopClub_VERSION_PLATFORM.zip" -%}
+                            {%- assign download_link = download_link | replace: "TYPE", release.type -%}
+                            {%- assign download_link = download_link | replace: "VERSION", release.version -%}
+                            {%- assign download_link = download_link | replace: "PLATFORM", platform -%}
+                            <td><a href="{{ download_link }}" download>Download</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
