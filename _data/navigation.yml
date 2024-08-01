@@ -9,3 +9,7 @@
 - name: Download
   link: /downloads/
   icon: fa-solid fa-download
+
+- name: News
+  link: /news/
+  icon: fa-solid fa-newspaper

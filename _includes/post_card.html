@@ -1,0 +1,24 @@
+{%- assign thumbnail = "posts/thumbnail.jpg" -%}
+{%- if include.post.thumbnail != nil -%}
+    {%- assign thumbnail = include.post.thumbnail -%}
+{%- endif -%}
+<div class="card">
+    <div class="card-image">
+        <figure class="image">
+            <a href="{{ include.post.url }}">
+                <img src="/assets/images/{{ thumbnail }}">
+            </a>
+        </figure>
+    </div>
+    <header class="card-header">
+        <a href="{{ include.post.url }}">
+            <p class="card-header-title">{{ include.post.title }}</p>
+        </a>
+    </header>
+    <div class="card-content">
+        <div class="content">
+            {{ include.post.excerpt }}
+            <p><i>{{ include.post.date | date_to_long_string }}</i></p>
+        </div>
+    </div>
+</div>
