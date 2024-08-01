@@ -1,0 +1,29 @@
+{%- if include.version contains "alpha" or include.version contains "beta" or include.version contains "rc" -%}
+    {%- assign type = "prerelease" -%}
+{%- else -%}
+    {%- assign type = "stable" -%}
+{%- endif -%}
+{%- assign href = /downloads/releases/TYPE/VERSION/TabletopClub_VERSION_PLATFORM.zip -%}
+{%- assign href = href | replace: "TYPE", type | replace: "VERSION", include.version | replace: "PLATFORM", include.platform -%}
+{%- if include.platform == "Windows_64" -%}
+    {%- assign platform_exp = "Windows (x86_64, 64-bit)" -%}
+    {%- assign icon = "fa-brands fa-windows" -%}
+{%- elsif include.platform == "Windows_32" -%}
+    {%- assign platform_exp = "Windows (x86, 32-bit)" -%}
+    {%- assign icon = "fa-brands fa-windows" -%}
+{%- elsif include.platform == "Linux_64" -%}
+    {%- assign platform_exp = "Linux (x86_64, 64-bit)" -%}
+    {%- assign icon = "fa-brands fa-linux" -%}
+{%- elsif include.platform == "Linux_32" -%}
+    {%- assign platform_exp = "Linux (x86, 32-bit)" -%}
+    {%- assign icon = "fa-brands fa-linux" -%}
+{%- elsif include.platform == "OSX_Universal" -%}
+    {%- assign platform_exp = "macOS (Universal)" -%}
+    {%- assign icon = "fa-brands fa-apple" -%}
+{%- endif -%}
+<a class="button is-primary" href="{{ href }}" download>
+    <span class="icon">
+        <i class="{{ icon }}"></i>
+    </span>
+    <span>Tabletop Club {{ include.version }} for {{ platform_exp }}</span>
+</a>

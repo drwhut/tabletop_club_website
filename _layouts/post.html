@@ -1,12 +1,62 @@
 ---
 layout: default
 ---
+{%- assign post_release = nil -%}
+{%- for release in site.data.releases -%}
+    {%- if page.name == release.post -%}
+        {%- assign post_release = release -%}
+        {%- break -%}
+    {%- endif -%}
+{%- endfor -%}
 <section class="section">
+    <h1 class="title has-text-centered">{{ page.title }}</h1>
     <div class="container">
         <div class="content">
             {{ content }}
+            {% if post_release != nil %}
+                <h2>Downloads</h2>
+                <h3>Windows</h3>
+                <div class="buttons are-medium">
+                    {% include download_button.html version=post_release.version platform="Windows_64" %}
+                    {% if post_release.has_windows_32 %}
+                        {% include download_button.html version=post_release.version platform="Windows_32" %}
+                    {% endif %}
+                </div>
+                <h3>Linux</h3>
+                <div class="buttons are-medium">
+                    {% include download_button.html version=post_release.version platform="Linux_64" %}
+                    {% if post_release.has_linux_32 %}
+                        {% include download_button.html version=post_release.version platform="Linux_32" %}
+                    {% endif %}
+                </div>
+                <h3>macOS</h3>
+                <div class="buttons are-medium">
+                    {% include download_button.html version=post_release.version platform="OSX_Universal" %}
+                </div>
+            {% endif %}
+        </div>
+        <div class="columns">
+            <div class="column has-text-left">
+                {% if page.previous != nil %}
+                    <a class="button is-link" href="{{ page.previous.url }}">
+                        <span class="icon">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </span>
+                        <span>{{ page.previous.title }}</span>
+                    </a>
+                {% endif %}
+            </div>
+            <div class="column has-text-right">
+                {% if page.next != nil %}
+                    <a class="button is-link" href="{{ page.next.url }}">
+                        <span>{{ page.next.title }}</span>
+                        <span class="icon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </a>
+                {% endif %}
+            </div>
         </div>
     </div>
-    <!-- TODO: Include title, buttons to go to previous, next, all posts, include download buttons if a release. -->
     <!-- TODO: Download images from posts and host them locally. -->
 </section>

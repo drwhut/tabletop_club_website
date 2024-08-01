@@ -10,66 +10,32 @@
         {%- break -%}
     {%- endif -%}
 {%- endfor -%}
-{%- assign dl_path = "/downloads/releases/prerelease/VERSION/TabletopClub_VERSION_PLATFORM_ARCH.zip" -%}
-{%- assign dl_path = dl_path | replace: "VERSION", latest_prerelease.version -%}
-{%- assign win_path = dl_path | replace: "PLATFORM", "Windows" -%}
-{%- assign win32_path = win_path | replace: "ARCH", "32" -%}
-{%- assign win64_path = win_path | replace: "ARCH", "64" -%}
-{%- assign linux_path = dl_path | replace: "PLATFORM", "Linux" -%}
-{%- assign linux32_path = linux_path | replace: "ARCH", "32" -%}
-{%- assign linux64_path = linux_path | replace: "ARCH", "64" -%}
-{%- assign osx_path = dl_path | replace: "PLATFORM", "OSX" | replace: "ARCH", "Universal" -%}
 {%- if latest_prerelease.date < latest_stable.date -%}
     <div class="block">
-        <article class="message is-warning">
-            <div class="message-body">
-                The latest pre-release build is older than the current stable release ({{ latest_stable.version }}). It is highly recommended to <a href="/downloads">download the stable release</a> instead for the time being, until a new pre-release build is available to download.
-            </div>
-        </article>
+        {% capture old_prerelease_note %}
+            The latest pre-release build is older than the current stable release ({{ latest_stable.version }}).
+            It is highly recommended to <a href="/downloads">download the stable release</a> instead for the time being, until a new pre-release build is available to download.
+        {% endcapture %}
+        {% include message.html type="is-warning" content=old_prerelease_note %}
     </div>
 {%- endif -%}
 <div class="block content">
     <h2>Windows</h2>
     <div class="buttons are-medium">
-        <a class="button is-primary" href="{{ win64_path }}" download>
-            <span class="icon">
-                <i class="fa-brands fa-windows"></i>
-            </span>
-            <span>Tabletop Club {{ latest_prerelease.version }} for Windows (x86_64, 64-bit)</span>
-        </a>
-        <a class="button is-primary" href="{{ win32_path }}" download>
-            <span class="icon">
-                <i class="fa-brands fa-windows"></i>
-            </span>
-            <span>Tabletop Club {{ latest_prerelease.version }} for Windows (x86, 32-bit)</span>
-        </a>
+        {% include download_button.html version=latest_prerelease.version platform="Windows_64" %}
+        {% include download_button.html version=latest_prerelease.version platform="Windows_32" %}
     </div>
 </div>
 <div class="block content">
     <h2>Linux</h2>
     <div class="buttons are-medium">
-        <a class="button is-primary" href="{{ linux64_path }}" download>
-            <span class="icon">
-                <i class="fa-brands fa-linux"></i>
-            </span>
-            <span>Tabletop Club {{ latest_prerelease.version }} for Linux (x86_64, 64-bit)</span>
-        </a>
-        <a class="button is-primary" href="{{ linux32_path }}" download>
-            <span class="icon">
-                <i class="fa-brands fa-linux"></i>
-            </span>
-            <span>Tabletop Club {{ latest_prerelease.version }} for Linux (x86, 32-bit)</span>
-        </a>
+        {% include download_button.html version=latest_prerelease.version platform="Linux_64" %}
+        {% include download_button.html version=latest_prerelease.version platform="Linux_32" %}
     </div>
 </div>
 <div class="block content">
     <h2>macOS</h2>
     <div class="buttons are-medium">
-        <a class="button is-primary" href="{{ osx_path }}" download>
-            <span class="icon">
-                <i class="fa-brands fa-apple"></i>
-            </span>
-            <span>Tabletop Club {{ latest_prerelease.version }} for macOS (Universal)</span>
-        </a>
+        {% include download_button.html version=latest_prerelease.version platform="OSX_Universal" %}
     </div>
 </div>

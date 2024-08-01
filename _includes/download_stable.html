@@ -4,44 +4,17 @@
         {%- break -%}
     {%- endif -%}
 {%- endfor -%}
-{%- assign dl_path = "/downloads/releases/stable/VERSION/TabletopClub_VERSION_PLATFORM_ARCH.zip" -%}
-{%- assign dl_path = dl_path | replace: "VERSION", latest_stable.version -%}
-{%- assign win_path = dl_path | replace: "PLATFORM", "Windows" -%}
-{%- assign win32_path = win_path | replace: "ARCH", "32" -%}
-{%- assign win64_path = win_path | replace: "ARCH", "64" -%}
-{%- assign linux_path = dl_path | replace: "PLATFORM", "Linux" -%}
-{%- assign linux32_path = linux_path | replace: "ARCH", "32" -%}
-{%- assign linux64_path = linux_path | replace: "ARCH", "64" -%}
-{%- assign osx_path = dl_path | replace: "PLATFORM", "OSX" | replace: "ARCH", "Universal" -%}
 <div class="fixed-grid has-1-cols-mobile has-1-cols-tablet has-1-cols-desktop has-2-cols-widescreen has-2-cols-fullhd">
     <div class="grid">
         <div class="cell content">
             <h2>Windows</h2>
             <p>The recommended way to download and play the game is with the <a href="#itch">itch app</a>, which will install and update the game automatically for you.</p>
             <p>Alternatively, you can download a portable version of the game: simply extract the files anywhere, and run the executable.</p>
-            <article class="message is-info">
-                <div class="message-body">
-                    If you are using <strong>Windows 11</strong>, you will also need to right-click the executable once it has been extracted, open <strong>Properties</strong>, and tick the <strong>Unblock</strong> checkbox at the bottom of the window.
-                </div>
-            </article>
-            <article class="message is-warning">
-                <div class="message-body">
-                    The executable is not digitally signed, so you'll likely get a message saying the publisher can't be trusted. You can bypass this warning by clicking <strong>More info</strong>, then <strong>Run anyway</strong>.
-                </div>
-            </article>
+            {% include message.html type="is-info" content="If you are using <strong>Windows 11</strong>, you will also need to right-click the executable once it has been extracted, open <strong>Properties</strong>, and tick the <strong>Unblock</strong> checkbox at the bottom of the window." %}
+            {% include message.html type="is-warning" content="The executable is not digitally signed, so you'll likely get a message saying the publisher can't be trusted. You can bypass this warning by clicking <strong>More info</strong>, then <strong>Run anyway</strong>." %}
             <div class="buttons are-medium">
-                <a class="button is-primary" href="{{ win64_path }}" download>
-                    <span class="icon">
-                        <i class="fa-brands fa-windows"></i>
-                    </span>
-                    <span>Tabletop Club {{ latest_stable.version }} for Windows (x86_64, 64-bit)</span>
-                </a>
-                <a class="button is-primary" href="{{ win32_path }}" download>
-                    <span class="icon">
-                        <i class="fa-brands fa-windows"></i>
-                    </span>
-                    <span>Tabletop Club {{ latest_stable.version }} for Windows (x86, 32-bit)</span>
-                </a>
+                {% include download_button.html version=latest_stable.version platform="Windows_64" %}
+                {% include download_button.html version=latest_stable.version platform="Windows_32" %}
             </div>
             <p><i><strong>Windows 7</strong> or later is recommended.</i></p>
         </div>
@@ -50,43 +23,22 @@
             <p>If your distribution has support for Flatpak, then you can download and install the game directly from <a href="https://flathub.org/apps/io.itch.drwhut.TabletopClub" target="_blank">Flathub</a> using your distribution's software manager.</p>
             <p>Otherwise, you can download a portable version of the game: simply extract the files anywhere, and run the executable.</p>
             <div class="buttons are-medium">
-                <a class="button is-primary" href="{{ linux64_path }}" download>
-                    <span class="icon">
-                        <i class="fa-brands fa-linux"></i>
-                    </span>
-                    <span>Tabletop Club {{ latest_stable.version }} for Linux (x86_64, 64-bit)</span>
-                </a>
-                <a class="button is-primary" href="{{ linux32_path }}" download>
-                    <span class="icon">
-                        <i class="fa-brands fa-linux"></i>
-                    </span>
-                    <span>Tabletop Club {{ latest_stable.version }} for Linux (x86, 32-bit)</span>
-                </a>
+                {% include download_button.html version=latest_stable.version platform="Linux_64" %}
+                {% include download_button.html version=latest_stable.version platform="Linux_32" %}
             </div>
         </div>
         <div class="cell content">
             <h2>macOS</h2>
             <p>The recommended way to download and play the game is with the <a href="#itch">itch app</a>, which will install and update the game automatically for you.</p>
             <p>Alternatively, you can download a portable version of the game: simply open the archive, and run the application.</p>
-            <article class="message is-warning">
-                <div class="message-body">
-                    The application is not digitally signed, so you'll need to right-click the game in <strong>Finder</strong>, click <strong>Open</strong>, and then click <strong>Open</strong> again on the pop-up that appears.
-                    You may also need to allow the application to run in the <strong>Security</strong> section of your <strong>System Settings</strong>.
-                </div>
-            </article>
-            <article class="message is-danger">
-                <div class="message-body">
-                    There is a known bug that prevents the game from running on newer devices with ARM processors (M1, M2, etc.) - you can get around this by forcing the game to run under <strong>Rosetta</strong> by selecting the game in <strong>Finder</strong>, pressing <strong>Command + I</strong>, then checking <strong>Open using Rosetta</strong> in the <strong>Inspector</strong> window.
-                    For more information, read through <a href="https://github.com/drwhut/tabletop-club/issues/282" target="_blank">the bug report</a>.
-                </div>
-            </article>
+            {% include message.html type="is-warning" content="The application is not digitally signed, so you'll need to right-click the game in <strong>Finder</strong>, click <strong>Open</strong>, and then click <strong>Open</strong> again on the pop-up that appears. You may also need to allow the application to run in the <strong>Security</strong> section of your <strong>System Settings</strong>." %}
+            {% capture macos_arm_bug %}
+                There is a known bug that prevents the game from running on newer devices with ARM processors (M1, M2, etc.) - you can get around this by forcing the game to run under <strong>Rosetta</strong> by selecting the game in <strong>Finder</strong>, pressing <strong>Command + I</strong>, then checking <strong>Open using Rosetta</strong> in the <strong>Inspector</strong> window.
+                For more information, read through <a href="https://github.com/drwhut/tabletop-club/issues/282" target="_blank">the bug report</a>.
+            {% endcapture %}
+            {% include message.html type="is-danger" content=macos_arm_bug %}
             <div class="buttons are-medium">
-                <a class="button is-primary" href="{{ osx_path }}" download>
-                    <span class="icon">
-                        <i class="fa-brands fa-apple"></i>
-                    </span>
-                    <span>Tabletop Club {{ latest_stable.version }} for macOS (Universal)</span>
-                </a>
+                {% include download_button.html version=latest_stable.version platform="OSX_Universal" %}
             </div>
             <p><i><strong>macOS 10.12</strong> or later is recommended.</i></p>
         </div>
