@@ -2,27 +2,26 @@
 layout: post
 title: "Release: v0.1.0 RC 1"
 ---
-<p>This is the beginning of the end... the end of the pre-release cycle for v0.1.0! <img class="emoji" alt="partying_face" src="https://github.githubassets.com/images/icons/emoji/unicode/1f973.png" width="20" height="20">
-</p>
-<p>This release is the first <strong>release candidate</strong> for  v0.1.0, meaning that the builds provided here may very well be the  builds used in the official release! All that will be added from now  until v0.1.0 will be bug fixes and minor tweaks, with the big features  that have been requested by you all coming later down the line in  v0.2.0, of which there are many <img class="emoji" alt="stuck_out_tongue" src="https://github.githubassets.com/images/icons/emoji/unicode/1f61b.png" width="20" height="20">  But I've got a super-duper mega code re-write planned for then, so that  I finally get revenge on my past self for making some very questionable  design decisions <img class="emoji" alt="angry" src="https://github.githubassets.com/images/icons/emoji/unicode/1f620.png" width="20" height="20">
-</p>
-<p>As always, any bug reports are greatly appreciated! Time is running  out before the full release, so the more bugs that can be squashed  beforehand, the better - and I'm still accepting feature requests, as  well as general feedback on the <a href="https://drwhut.itch.io/tabletop-club" rel="nofollow">itch.ios</a>, the <a href="https://fosstodon.org/@drwhut" rel="nofollow">Mastodons</a>, and the <a href="https://twitter.com/drwhutt" rel="nofollow">Twitters</a>.
-</p>
-<p>Happy bug hunting!
-</p>
+<p>This is the beginning of the end... the end of the pre-release cycle for v0.1.0! <img class="emoji" alt="partying_face" src="https://github.githubassets.com/images/icons/emoji/unicode/1f973.png" width="20" height="20"></p>
+<p>This release is the first <strong>release candidate</strong> for v0.1.0, meaning that the builds provided here may very well be the builds used in the official release! All that will be added from now until v0.1.0 will be bug fixes and minor tweaks, with the big features that have been requested by you all coming later down the line in v0.2.0, of which there are many <img class="emoji" alt="stuck_out_tongue" src="https://github.githubassets.com/images/icons/emoji/unicode/1f61b.png" width="20" height="20">  But I've got a super-duper mega code re-write planned for then, so that  I finally get revenge on my past self for making some very questionable  design decisions <img class="emoji" alt="angry" src="https://github.githubassets.com/images/icons/emoji/unicode/1f620.png" width="20" height="20"></p>
+<p>As always, any bug reports are greatly appreciated! Time is running out before the full release, so the more bugs that can be squashed beforehand, the better - and I'm still accepting feature requests, as well as general feedback on the <a href="https://drwhut.itch.io/tabletop-club" rel="nofollow">itch.ios</a>, the <a href="https://fosstodon.org/@drwhut" rel="nofollow">Mastodons</a>, and the <a href="https://twitter.com/drwhutt" rel="nofollow">Twitters</a>.</p>
+<p>Happy bug hunting!</p>
 <h2>Changelog</h2>
 <h3>Added</h3>
-<ul><li>Added a "Clear Paint" button to the "Clear Table" window.
-</li><li>Added an optional <code>--base-asset-dir</code> argument, which will  change where the game looks for the default asset pack on Windows and  Linux. This is mostly to accommodate for running the game in a sandboxed  environment, and won't be needed for most users.
-</li><li>Updated translations from the community.
-</li></ul>
+<ul>
+    <li>Added a "Clear Paint" button to the "Clear Table" window.</li>
+    <li>Added an optional <code>--base-asset-dir</code> argument, which will  change where the game looks for the default asset pack on Windows and  Linux. This is mostly to accommodate for running the game in a sandboxed environment, and won't be needed for most users.</li>
+    <li>Updated translations from the community.</li>
+</ul>
 <h3>Changed</h3>
-<ul><li>When two cards or tokens combine to make a stack, the stack now  inherits the angular and linear velocity of the piece with the smallest  value.
-</li><li>Players can no longer include the double quote character (<code>"</code>) in their names. This is a temporary measure until a more sophisticated command argument parser is implemented.
-</li></ul>
+<ul>
+    <li>When two cards or tokens combine to make a stack, the stack now inherits the angular and linear velocity of the piece with the smallest value.</li>
+    <li>Players can no longer include the double quote character (<code>"</code>) in their names. This is a temporary measure until a more sophisticated command argument parser is implemented.</li>
+</ul>
 <h3>Fixed</h3>
-<ul><li>Fixed music played through in-game speakers and timers using the wrong audio bus.
-</li><li>Fixed errors related to custom assets in the documentation.
-</li><li>Fixed being unable to whisper to players with trailing spaces in their name.
-</li><li>Fixed pieces released from containers being immediately added back in if they were initially added with an unusual rotation.
-</li></ul>
+<ul>
+    <li>Fixed music played through in-game speakers and timers using the wrong audio bus.</li>
+    <li>Fixed errors related to custom assets in the documentation.</li>
+    <li>Fixed being unable to whisper to players with trailing spaces in their name.</li>
+    <li>Fixed pieces released from containers being immediately added back in if they were initially added with an unusual rotation.</li>
+</ul>

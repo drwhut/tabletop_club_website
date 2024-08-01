@@ -32,12 +32,7 @@ title: Home
             {% for column in (1..2) %}
                 <div class="column">
                     {% for screenshot in site.data.screenshots limit: 2 offset: continue %}
-                        <figure class="image">
-                            <a href="/assets/images/{{ screenshot.file }}">
-                                <img src="/assets/images/{{ screenshot.file }}" alt="{{ screenshot.alt }}">
-                            </a>
-                            <figcaption>{{ screenshot.caption }}</figcaption>
-                        </figure>
+                        {% include figure.html image=screenshot.file alt=screenshot.alt caption=screenshot.caption full=true %}
                     {% endfor %}
                 </div>
             {% endfor %}
