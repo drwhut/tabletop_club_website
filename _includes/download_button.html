@@ -3,7 +3,7 @@
 {%- else -%}
     {%- assign type = "stable" -%}
 {%- endif -%}
-{%- assign href = /downloads/releases/TYPE/VERSION/TabletopClub_VERSION_PLATFORM.zip -%}
+{%- assign href = "/downloads/releases/TYPE/VERSION/TabletopClub_VERSION_PLATFORM.zip" -%}
 {%- assign href = href | replace: "TYPE", type | replace: "VERSION", include.version | replace: "PLATFORM", include.platform -%}
 {%- if include.platform == "Windows_64" -%}
     {%- assign platform_exp = "Windows (x86_64, 64-bit)" -%}
