@@ -1,0 +1,26 @@
+title: Tabletop Club
+tagline: The free and open source board game simulator
+description: Play tabletop games in a physics-based, 3D environment with your friends, no logins or sign-ups required.
+url: https://tabletopclub.net
+logo: /assets/images/tabletop_club_icon.png
+locale: en_GB
+
+social:
+  name: Benjamin Beddows
+  links:
+    - https://twitter.com/drwhutt
+    - https://fosstodon.org/@drwhut
+    - https://github.com/drwhut
+    - https://ko-fi.com/drwhut
+
+twitter:
+  username: drwhutt
+
+exclude:
+  [
+    "build.sh",
+    "downloads/releases/build.sh",
+  ]
+
+plugins:
+  - jekyll-seo-tag
