@@ -16,6 +16,9 @@ social:
 twitter:
   username: drwhutt
 
+author:
+  twitter: drwhutt
+
 exclude:
   [
     "build.sh",
@@ -24,3 +27,5 @@ exclude:
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
