@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# Check that certain release directories exist.
+if [ ! -d "downloads/releases/stable" ]; then
+    echo "Directory 'downloads/releases/stable' does not exist!"
+    exit 1
+fi
+
+if [ ! -d "downloads/releases/prerelease" ]; then
+    echo "Directory 'downloads/releases/prerelease' does not exist!"
+    exit 1
+fi
+
 # Check that we are on the master branch.
 git_branch=$(git branch --show-current)
 
