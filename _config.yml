@@ -25,6 +25,8 @@ exclude:
     "downloads/releases/build.sh",
   ]
 
+permalink: pretty
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
