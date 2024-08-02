@@ -1,0 +1,37 @@
+- title: Tabletop Club
+  pages:
+    - name: Downloads
+      url: /downloads/
+    - name: News
+      url: /news/
+    - name: Contribute
+      url: /contribute/
+    - name: Code of Conduct
+      url: /code-of-conduct/
+    - name: Privacy Policy
+      url: /privacy-policy/
+
+- title: Community
+  pages:
+    - name: Matrix
+      url: https://matrix.to/#/#tabletop-club:matrix.org
+    - name: Discord
+      url: https://discord.gg/GqYkGV4WwX
+
+- title: Contact
+  pages:
+    - name: Mastodon
+      url: https://fosstodon.org/@drwhut
+    - name: Twitter / X
+      url: https://twitter.com/drwhutt
+
+- title: Development
+  pages:
+    - name: GitHub
+      url: https://github.com/drwhut/tabletop-club
+    - name: Documentation
+      url: https://tabletop-club.readthedocs.io/en/stable/index.html
+    - name: Donate
+      url: https://ko-fi.com/drwhut
+    - name: Asset Packs
+      url: https://tabletop-club.readthedocs.io/en/stable/custom_assets/asset_packs/index.html
