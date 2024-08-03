@@ -20,14 +20,6 @@
     <body>
         {% include navigation.html %}
         {{ content }}
-        <footer class="footer">
-            <div class="container">
-                {% include footer_links.html %}
-                <div class="has-text-centered">
-                    <p>© 2020-2024 Benjamin 'drwhut' Beddows, Tabletop Club <a href="https://github.com/drwhut/tabletop-club/blob/master/game/CREDITS.tres" target="_blank">contributors</a>.</p>
-                    <p>Website source code is hosted on <a href="https://github.com/drwhut/tabletop_club_website" target="_blank">GitHub</a>.</p>
-                </div>
-            </div>
-        </footer>
+        {% include footer.html %}
     </body>
 </html>
