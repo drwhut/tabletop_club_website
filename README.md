@@ -1,4 +1,4 @@
-# [tabletopclub.net](tabletopclub.net)
+# [tabletopclub.net](https://tabletopclub.net)
 
 The official website for the free and open source board game simulator,
 [Tabletop Club](https://github.com/drwhut/tabletop-club/).
