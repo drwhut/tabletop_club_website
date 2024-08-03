@@ -1,6 +1,6 @@
 - name: Features
   link: /#features
-  icon: fa-solid fa-chess-board
+  icon: fa-solid fa-dice-d6
 
 - name: Gallery
   link: /#gallery
@@ -13,3 +13,7 @@
 - name: News
   link: /news/
   icon: fa-solid fa-newspaper
+
+- name: Community
+  link: /community/
+  icon: fa-solid fa-comments

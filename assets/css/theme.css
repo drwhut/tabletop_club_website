@@ -27,3 +27,24 @@ p.title, p.subtitle {
 a:not(.button, .navbar-item) {
     text-decoration: underline;
 }
+
+.button.is-white.is-matrix {
+    --bulma-white-h: 163;
+    --bulma-white-s: 87%;
+    --bulma-white-l: 40%;
+    --bulma-white-invert-l: 100%;
+}
+
+.button.is-white.is-discord {
+    --bulma-white-h: 235;
+    --bulma-white-s: 86%;
+    --bulma-white-l: 65%;
+    --bulma-white-invert-l: 100%;
+}
+
+.button.is-white.is-mastodon {
+    --bulma-white-h: 252;
+    --bulma-white-s: 59%;
+    --bulma-white-l: 51%;
+    --bulma-white-invert-l: 100%;
+}

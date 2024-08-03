@@ -5,7 +5,7 @@
     - name: News
       url: /news/
     - name: Contribute
-      url: /contribute/
+      url: /community/#contribute
     - name: Code of Conduct
       url: /code-of-conduct/
     - name: Privacy Policy
