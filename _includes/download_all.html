@@ -35,6 +35,12 @@
                     </span>
                     <span>macOS (Universal)</span>
                 </th>
+                <th>
+                    <span class="icon">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </span>
+                    <span>SHA512</span>
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -57,6 +63,10 @@
                             <td><a href="{{ download_link }}" download>Download</a></td>
                         {% endif %}
                     {% endfor %}
+                    {%- assign sha512_link = "/downloads/releases/TYPE/VERSION/TabletopClub_VERSION_SHA512.txt" -%}
+                    {%- assign sha512_link = sha512_link | replace: "TYPE", release.type -%}
+                    {%- assign sha512_link = sha512_link | replace: "VERSION", release.version -%}
+                    <td><a href="{{ sha512_link }}" target="_blank">View</a></td>
                 </tr>
             {% endfor %}
         </tbody>

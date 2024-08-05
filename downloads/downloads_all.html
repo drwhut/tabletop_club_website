@@ -9,6 +9,7 @@ title: Downloads - All
         <div class="content">
             <p>This page contains downloads for every single version of Tabletop Club that has been released, for each of the supported platforms. You can also see the full list of releases on <a href="https://github.com/drwhut/tabletop-club/releases" target="_blank">GitHub</a>.</p>
             <p>Instructions on how to download and play the game on each platform can be found in <a href="https://docs.tabletopclub.net/en/latest/general/download/downloading_binaries.html" target="_blank">the documentation</a>.</p>
+            <p>Although it is optional, it is recommended that you verify your download to ensure that it has not been modified. SHA512 hashes are provided for each release, and instructions on how to check your download's hash can be found <a href="https://docs.tabletopclub.net/en/stable/general/download/downloading_binaries.html#verifying-the-download" target="_blank">here</a>.</p>
             <p>Just looking for the latest release? Then you will want to visit the <a href="/downloads">downloads</a> page.</p>
             {% capture auto_update_note %}
                 <strong>NOTE:</strong> Only standalone executables are provided on this page.
@@ -16,7 +17,6 @@ title: Downloads - All
             {% endcapture %}
             {% include message.html type="is-info" content=auto_update_note %}
         </div>
-        <!-- TODO: Include instructions on how to verify the download. -->
         {% include download_all.html %}
     </div>
 </section>
