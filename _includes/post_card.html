@@ -3,18 +3,18 @@
     {%- assign thumbnail = include.post.thumbnail -%}
 {%- endif -%}
 <div class="card">
-    <div class="card-image">
-        <figure class="image">
+    <a href="{{ include.post.url }}">
+        <div class="card-image">
+            <figure class="image">
+                <img src="/assets/images/{{ thumbnail }}" alt="">
+            </figure>
+        </div>
+        <header class="card-header">
             <a href="{{ include.post.url }}">
-                <img src="/assets/images/{{ thumbnail }}">
+                <p class="card-header-title">{{ include.post.title }}</p>
             </a>
-        </figure>
-    </div>
-    <header class="card-header">
-        <a href="{{ include.post.url }}">
-            <p class="card-header-title">{{ include.post.title }}</p>
-        </a>
-    </header>
+        </header>
+    </a>
     <div class="card-content">
         <div class="content">
             {{ include.post.excerpt }}
