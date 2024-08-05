@@ -30,8 +30,8 @@
     - name: GitHub
       url: https://github.com/drwhut/tabletop-club
     - name: Documentation
-      url: https://tabletop-club.readthedocs.io/en/stable/index.html
+      url: https://docs.tabletopclub.net/en/stable/index.html
     - name: Donate
       url: https://ko-fi.com/drwhut
     - name: Asset Packs
-      url: https://tabletop-club.readthedocs.io/en/stable/custom_assets/asset_packs/index.html
+      url: https://docs.tabletopclub.net/en/stable/custom_assets/asset_packs/index.html
