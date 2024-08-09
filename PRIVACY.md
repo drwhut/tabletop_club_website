@@ -2,12 +2,13 @@
 permalink: /privacy-policy/
 layout: basic
 title: Privacy Policy
-last_updated: 2024-08-02
+last_updated: 2024-08-09
 ---
 # Privacy Policy
 
 *This document was last updated on {{ page.last_updated | date_to_long_string }}.
-Updates to the privacy policy will be announced via [News](/news/) posts
+Updates to the privacy policy will be announced via posts on the Tabletop Club
+Forum
 ([view updates](https://github.com/drwhut/tabletop_club_website/commits/master/PRIVACY.md)).*
 
 This document describes in detail the personal information that is collected
