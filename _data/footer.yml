@@ -13,6 +13,8 @@
 
 - title: Community
   pages:
+    - name: Forum
+      url: https://forum.tabletopclub.net
     - name: Matrix
       url: https://matrix.to/#/#tabletop-club:matrix.org
     - name: Discord
