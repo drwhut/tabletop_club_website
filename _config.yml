@@ -23,8 +23,10 @@ exclude:
   [
     "build.sh",
     "downloads/releases/build.sh",
+    "CONTRIBUTING.md",
     "LICENSE",
     "README.md",
+    "SECURITY.md",
   ]
 
 permalink: pretty
