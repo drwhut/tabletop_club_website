@@ -24,6 +24,7 @@
   pages:
     - name: Mastodon
       url: https://fosstodon.org/@drwhut
+      rel_me: true
     - name: Twitter / X
       url: https://twitter.com/drwhutt
 
