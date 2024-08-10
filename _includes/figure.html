@@ -1,5 +1,5 @@
 <figure {% if include.full == true %}class="image"{% endif %}>
-    <a href="/assets/images/{{ include.image }}" target="_blank">
+    <a {% unless include.href == "" or include.href == nil %}href="{{ include.href }}"{% else %}href="/assets/images/{{ include.image }}"{% endunless %} target="_blank">
         <img src="/assets/images/{{ include.image }}" alt="{{ include.alt }}">
     </a>
     {% unless include.caption == "" or include.caption == nil %}

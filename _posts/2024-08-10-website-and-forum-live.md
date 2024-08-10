@@ -226,7 +226,7 @@ So if you like the project, and you would like to help contribute towards the
 running costs of the new infrastructure, then please feel free to donate on my
 Ko-Fi page! Any donations, no matter how big or small, are hugely appreciated.
 
-{% include figure.html image="posts/2024-08-10/kofi_button.webp" alt="Support me on ko-fi" %}
+{% include figure.html image="posts/2024-08-10/kofi_button.webp" alt="Support me on ko-fi" href="https://ko-fi.com/drwhut" %}
 
 And with that, I bid you all adieu! If everything goes to plan, next time you
 hear from me, I'll have some more things to show off from the v0.2.0 update!
