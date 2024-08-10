@@ -1,12 +1,12 @@
-{%- assign thumbnail = "posts/thumbnail.jpg" -%}
-{%- if include.post.thumbnail != nil -%}
-    {%- assign thumbnail = include.post.thumbnail -%}
+{%- assign image = "/assets/images/posts/thumbnail.jpg" -%}
+{%- if include.post.image != nil -%}
+    {%- assign image = include.post.image -%}
 {%- endif -%}
 <div class="card">
     <a href="{{ include.post.url }}">
         <div class="card-image">
             <figure class="image">
-                <img src="/assets/images/{{ thumbnail }}" alt="">
+                <img src="{{ image }}" alt="">
             </figure>
         </div>
         <header class="card-header">

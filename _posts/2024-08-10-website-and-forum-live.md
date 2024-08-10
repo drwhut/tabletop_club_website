@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Announcement: Website and forum are now live!"
-thumbnail: posts/2024-08-10/thumbnail.jpg
+image: /assets/images/posts/2024-08-10/thumbnail.jpg
 ---
 Hey everyone! We live in an age where your digital footprint matters, SEO reigns
 supreme, and I have an unhealthy obsession over lasagne. With this in mind, I'm

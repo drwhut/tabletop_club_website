@@ -8,7 +8,11 @@ layout: default
         {%- break -%}
     {%- endif -%}
 {%- endfor -%}
-<section class="hero" style="background-image: url('/assets/images/{{ page.thumbnail }}');">
+{%- assign image = "/assets/images/posts/thumbnail.jpg" -%}
+{%- if page.image != nil -%}
+    {%- assign image = page.image -%}
+{%- endif -%}
+<section class="hero" style="background-image: url('{{ image }}');">
     <div class="hero-body blur-behind">
         <div class="container has-text-centered">
             <p class="title is-spaced">{{ page.title }}</p>
