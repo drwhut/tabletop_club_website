@@ -48,3 +48,7 @@ a:not(.button, .navbar-item) {
     --bulma-white-l: 51%;
     --bulma-white-invert-l: 100%;
 }
+
+.blur-behind {
+    backdrop-filter: blur(8px);
+}
