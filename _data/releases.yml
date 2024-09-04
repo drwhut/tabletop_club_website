@@ -1,3 +1,11 @@
+- version: v0.1.3
+  nickname:
+  post: 2024-09-04-release-v0.1.3.md
+  date: 2024-09-04
+  type: stable
+  has_windows_32: true
+  has_linux_32: true
+
 - version: v0.1.2
   nickname:
   post: 2023-09-05-release-v0.1.2.html
