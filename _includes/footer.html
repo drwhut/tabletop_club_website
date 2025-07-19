@@ -6,7 +6,7 @@
                     <p><strong>{{ category.title }}</strong></p>
                     {% for page in category.pages %}
                         <p>
-                            <a {% if page.rel_me == true %}rel="me"{% endif %} href="{{ page.url }}" {% if page.url contains "://" %}target="_blank"{% endif %}>{{ page.name }}</a>
+                            <a href="{{ page.url }}" {% if page.url contains "://" %}target="_blank"{% endif %}>{{ page.name }}</a>
                         </p>
                     {% endfor %}
                 </div>

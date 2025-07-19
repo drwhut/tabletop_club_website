@@ -8,16 +8,8 @@ locale: en_GB
 social:
   name: Benjamin Beddows
   links:
-    - https://twitter.com/drwhutt
-    - https://fosstodon.org/@drwhut
     - https://github.com/drwhut
     - https://ko-fi.com/drwhut
-
-twitter:
-  username: drwhutt
-
-author:
-  twitter: drwhutt
 
 exclude:
   [

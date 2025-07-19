@@ -42,13 +42,6 @@ a:not(.button, .navbar-item) {
     --bulma-white-invert-l: 100%;
 }
 
-.button.is-white.is-mastodon {
-    --bulma-white-h: 252;
-    --bulma-white-s: 59%;
-    --bulma-white-l: 51%;
-    --bulma-white-invert-l: 100%;
-}
-
 .blur-behind {
     backdrop-filter: blur(8px);
 }
